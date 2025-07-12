@@ -21,10 +21,12 @@ flame_net/
 - torchvision
 - pandas
 - opencv-python
+- onnx
+- onnxruntime
 
 Install dependencies:
 ```bash
-pip install torch torchvision pandas opencv-python
+pip install torch torchvision pandas opencv-python onnx onnxruntime
 ```
 
 ## Data Preparation
@@ -66,6 +68,28 @@ Uncomment the `test()` call in main.py to run a simple test loader.
 
 - Change `DATA_DIR`, `LABELS_PATH`, `NUM_CLASSES`, `BATCH_SIZE`, `EPOCHS`, and other parameters at the top of main.py.
 - Adjust frame size in the `VideoDataset` class if needed.
+
+## ONNX Export and Test
+
+You can export your trained PyTorch model to ONNX format and test it using the provided `onnx_converter.py` script.
+
+### Export to ONNX
+
+```bash
+python onnx_converter.py
+```
+
+This will:
+- Export the model weights (e.g., `weights/convnet_0.pth`) to ONNX format (`weights/convnet_0.onnx`).
+- Print confirmation after export.
+
+### Test ONNX Model
+
+The script will also:
+- Validate the exported ONNX model.
+- Run a test inference using ONNX Runtime and print the output shape.
+
+Make sure you have installed the `onnx` and `onnxruntime` packages.
 
 ## Notes
 
