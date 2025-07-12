@@ -106,7 +106,7 @@ def train():
             running_loss += loss.item() * videos.size(0)
         print(f"Epoch {epoch+1}/{EPOCHS}, Loss: {running_loss/len(dataset):.4f}")
 
-    torch.save(model.state_dict(), "simple_convnet.pth")
+    torch.save(model.state_dict(), "weights/simple_convnet.pth")
     print("Training complete.")
 
 

@@ -1,0 +1,50 @@
+Loading dataset...
+Dataset loaded with 1800 samples.
+Initialized model ConvNet(
+  (features): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1))
+    (4): ReLU()
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+    (7): ReLU()
+    (8): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (9): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+    (10): ReLU()
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=128, out_features=30, bias=True)
+), optimizer Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    decoupled_weight_decay: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0
+), criterion CrossEntropyLoss().
+Epoch 1/16, Loss: 3.3546
+Epoch 2/16, Loss: 2.7554
+Epoch 3/16, Loss: 2.3213
+Epoch 4/16, Loss: 1.9308
+Epoch 5/16, Loss: 1.7704
+Epoch 6/16, Loss: 1.6330
+Epoch 7/16, Loss: 1.5108
+Epoch 8/16, Loss: 1.3947
+Epoch 9/16, Loss: 1.2262
+Epoch 10/16, Loss: 1.1927
+Epoch 11/16, Loss: 1.0277
+Epoch 12/16, Loss: 0.8681
+Epoch 13/16, Loss: 0.7838
+Epoch 14/16, Loss: 0.7255
+Epoch 15/16, Loss: 0.7296
+Epoch 16/16, Loss: 0.7353
+Training complete.
